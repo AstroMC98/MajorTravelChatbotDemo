@@ -160,7 +160,7 @@ for msg in messages:
         #print(msg)
         
 # delete older completions to keep conversation under token limit
-while num_tokens_from_messages(messages) >= 8192*0.8:
+while num_tokens_from_messages(messages) >= 8192*0.95:
     print("Removing Older Texts due to token number!")
     messages.pop(0)
 print("Current number of Tokens : ",  num_tokens_from_messages(messages))
